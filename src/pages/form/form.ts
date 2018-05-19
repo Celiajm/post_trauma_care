@@ -24,9 +24,11 @@ export class FormPage {
 
   }
 
-  closeFormPage() {
-    this.nav.push(HomePage)
-  }
+  // closeFormPage() {
+  //   this.nav.push(HomePage), {
+  //     data:json
+  //   }
+  // }
 
   writeFile(){
     let array = [];

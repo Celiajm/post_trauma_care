@@ -6,14 +6,44 @@
 
 <ion-content padding>
   <h2>Welcome to Post Trauma Care!</h2>
-  <button (click) ="openFormPage()" ion-button icon-right>
-    New Encounter
-    <ion-icon name="encounter"></ion-icon>
-  </button>
 
+  <ion-grid>
 
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <ion-row class="ionrow">
+      <ion-col width-33 height-33>
+        <button (click) ="openFormPage()" ion-button full>
+        New Encounter
+          <ion-icon name="encounter"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col width-67><button (click) ="openChartPage()" ion-button full>
+        My Chart
+        <ion-icon name="encounter"></ion-icon>
+      </button></ion-col>
+    </ion-row>
+
+    <ion-row class="ionrow">
+      <ion-col align-self-stretch width-33><button (click) ="openFormPage()" ion-button full>
+        Rx Schedule
+        <ion-icon name="encounter"></ion-icon>
+      </button></ion-col>
+      <ion-col width-67><button (click) ="openCalendarPage()" ion-button full>
+        Calendar
+        <ion-icon name="encounter"></ion-icon>
+      </button></ion-col>
+    </ion-row>
+
+    <ion-row class="ionrow">
+      <ion-col align-self-stretch width-33><button (click) ="openFormPage()" ion-button full>
+        Active Orders
+        <ion-icon name="encounter"></ion-icon>
+      </button></ion-col>
+      <ion-col width-67><button (click) ="openFormPage()" ion-button full>
+        Journal
+        <ion-icon name="encounter"></ion-icon>
+      </button></ion-col>
+    </ion-row>
+
+  </ion-grid>
+
 </ion-content>
