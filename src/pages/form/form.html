@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Form
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form novalidate>
+    <ion-list>
+      <ion-list inset ></ion-list>
+        <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label color="primary" stacked>Diagnosis:</ion-label>
+          <ion-input [(ngModel)] = "user.Diagnosis" name="Diagnosis" placeholder="Type Diagnosis Here"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Care Instructions:</ion-label>
+          <ion-input [(ngModel)] = "user.Care" name = "Care" placeholder="Type Here"></ion-input>
+        </ion-item>
+
+        <!--<ion-searchbar-->
+          <!--[(ngModel)]="myInput"-->
+          <!--[showCancelButton]="shouldShowCancel"-->
+          <!--(ionInput)="getItems($event)"-->
+          <!--(ionCancel)="onCancel($event)">-->
+        <!--</ion-searchbar>-->
+        <!--<ion-list>-->
+          <!--<ion-item *ngFor="let item of items" (click) = "GotoNewPage(item)">-->
+            <!--{{ item }}-->
+          <!--</ion-item>-->
+        <!--</ion-list>-->
+
+        <ion-item>
+          <ion-label color="primary" stacked>Pills per Dose:</ion-label>
+          <ion-input  [(ngModel)] = "user.PPD" name = "PPD" type="number" placeholder="Number of Pills"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Take every:</ion-label>
+          <ion-input  [(ngModel)] = "user.PPH" name="PPH" type="number" placeholder="Hours"></ion-input>
+        </ion-item>
+    </ion-list>
+        <button ion-button (click)="writeFile();closeFormPage();"> Submit </button>
+  </form>
+</ion-content>
