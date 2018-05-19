@@ -42,10 +42,6 @@ export class HomePage {
   openCalendarPage() {
     this.nav.push(CalendarPage)
   }
-  openFormPage() {
-    this.nav.push(FormPage)
-  }
-  openFormPage() {
-    this.nav.push(FormPage)
-  }
+
+
 }
