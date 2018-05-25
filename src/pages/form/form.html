@@ -30,13 +30,14 @@
           <ion-label color="primary" stacked>Care Instructions:</ion-label>
           <ion-input [(ngModel)] = "user.Care" name = "Care" placeholder="Type Here"></ion-input>
         </ion-item>
-
-        <!--</ion-searchbar>-->
-        <!--<ion-list>-->
-          <!--<ion-item *ngFor="let item of items" (click) = "GotoNewPage(item)">-->
-            <!--{{ item }}-->
-          <!--</ion-item>-->
-        <!--</ion-list>-->
+      <br>
+        Medications:
+        <ion-searchbar (ionInput)="getItems($event)" ></ion-searchbar>
+        <ion-list>
+          <ion-item *ngFor="let item of items" >
+            {{ item }}
+          </ion-item>
+        </ion-list>
 
         <ion-item>
           <ion-label color="primary" stacked>Pills per Dose:</ion-label>
